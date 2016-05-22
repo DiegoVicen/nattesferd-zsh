@@ -1,49 +1,29 @@
-# Honukai theme and colors for Oh My ZSH and iTerm
+# Nattesferd Theme for zsh 
 
-![](https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.png)
-
-[See how it looks with blur and transparency](https://v.usetapes.com/SDGzCBkHh4) (video).
+![](https://raw.githubusercontent.com/diegovicen/nattesferd-zsh/master/nattesferd.png)
 
 ## Installation
 
 ### Theme
 
-The theme is based on the wonderfully made [ys](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/ys.zsh-theme) theme from the official [oh-my-zsh repo](https://github.com/robbyrussell/oh-my-zsh).
+The theme is a fork from [Honukai](https://github.com/oskarkrawczyk/honukai-iterm-zsh), based on the wonderfully made [ys](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/ys.zsh-theme) theme from the official [oh-my-zsh repo](https://github.com/robbyrussell/oh-my-zsh). It's main feature is the ability to change the hostname displayed to custom aliases, without changin any global variables or other configuration files.
 
-1. Drop [`honukai.zsh-theme`](https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme) into the `~/.oh-my-zsh/themes/` directory
-2. Change the theme variable name to `ZSH_THEME="honukai"` in `~/.zshrc`
-3. Reload ZSH with `source ~/.zshrc`
+### Installation
 
-### Colors
+1. Clone the repo anywhere in your computer using `git clone https://github.com/DiegoVicen/nattesferd-zsh.git`
+2. Go to the folder with `cd nattesferd-zsh` and then run `sh setup.sh`
+3. Change the theme variable name to `ZSH_THEME="nattesferd"` in `~/.zshrc`
+4. Reload ZSH with `source ~/.zshrc`
 
-1. Open **Preferences** pane on the **Profiles** tab in iTerm
-2. Switch to the **Colors** tab and import the [`honukai.itermcolors`](https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.itermcolors) (drop-down in the lower right corner)
+### Changing names
 
-**NOTE**: You'll need at least iTerm2.9-nightly (aka 3.0)
+1. Open the file `~/.host-alias.py` with your favourite text editor.
+2. Inside, you can see a dictionary called `alias`. Following the same format in the example, write each of the aliases you want to use for your hostnames. 
+3. If no alias is found, the prompt will display the default value of `hostname`.
 
-### Extra eye-candy
+### Eyecandy
 
-There's a bunch of settings you might want to change in your profile in order to get the extra eye-candy.
+In case you care, the screenshot of my terminal features Nattesferd with the color scheme [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/blob/master/iTerm2/Tomorrow%20Night%20Eighties.itermcolors) and the typography [Input Mono](http://input.fontbureau.com).
 
-#### **Text** tab:
+**NOTE**: Nattesferd has been done in 90 minutes while procastinating a Sunday afternoon. This has not been thoroughly tested anywhere apart from my own computer running Mac OS and iTerm. Feel free to install it or fork it, and if anything goes wrong, open an issue and let me know.
 
-**Cursor**
-
-- Set to **Vertical**
-
-**Font**
-
-- Change to **[12pt Fira Mono Medium](https://www.google.com/fonts/download?kit=fYE28jhsC94xTNRkQgmvA1tkqrIMaAZWyLYEoB48lSQ)** (I personally love the Fira font-face, and highly suggest using it)
-
-**Text Rendering**
-
-- Disable **Draw bold in bold font**
-- Disable **Draw bold in bright colors**
-- Enable **Draw anti-aliased text with thin strokes**
-
-#### **Window** tab
-
-**Window appearance**
-
-- **Transparency** to **10-15%**
-- **Blur** to **40-50%**
