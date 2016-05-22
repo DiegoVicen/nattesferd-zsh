@@ -27,5 +27,10 @@ If no alias is found, the prompt will display the default value of `$HOST` or `$
 
 In case you care, the screenshot of my terminal features Nattesferd with the color scheme [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/blob/master/iTerm2/Tomorrow%20Night%20Eighties.itermcolors) and the typography [Input Mono](http://input.fontbureau.com).
 
+### Genius Annotation
+
+Nattesferd means *night traveller* in Norwegian, and it's inspired by an incredible song by the Norwegian band Kvelertak. You can listen to it [here](https://www.youtube.com/watch?v=I189nD_yeQs).
+
 **NOTE**: Nattesferd has been done in 90 minutes while procastinating a Sunday afternoon. This has not been thoroughly tested anywhere apart from my own computer running Mac OS and iTerm. Feel free to install it or fork it, and if anything goes wrong, open an issue and let me know.
+
 
