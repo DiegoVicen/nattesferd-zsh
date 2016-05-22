@@ -1,7 +1,14 @@
-# Machine name.
-function box_name {
-    python ~/.host_alias.py
-}
+# vim:ft=zsh
+
+typeset -A host_repr
+
+host_repr=( 'mbp.local' "Riverwood" 
+            )
+
+typeset -A user_repr
+
+user_repr=( 'diego' "Nattesferd"
+            )
 
 # Directory info.
 local current_dir='${PWD/#$HOME/~}'
@@ -39,9 +46,9 @@ ys_hg_prompt_info() {
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-%{$fg[cyan]%}%n \
+%{$fg[cyan]%}${user_repr[$USER]:-$USER} \
 %{$fg[white]%}at \
-%{$fg[green]%}$(box_name) \
+%{$fg[green]%}${host_repr[$HOST]:-$HOST} \
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
@@ -52,9 +59,9 @@ ${git_info} \
 if [[ "$USER" == "root" ]]; then
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-%{$bg[yellow]%}%{$fg[cyan]%}%n%{$reset_color%} \
+%{$fg[cyan]%}${user_repr[$USER]:-$USER} \
 %{$fg[white]%}at \
-%{$fg[green]%}$(box_name) \
+%{$fg[green]%}${host_repr[$HOST]:-$HOST} \
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
