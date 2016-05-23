@@ -1,12 +1,20 @@
 # vim:ft=zsh
 
+# Nattersfed is a theme that pretends to focus on clean aesthetics, that grows
+# from ys and honukai. 
+
 typeset -A host_repr
 
-host_repr=( 'mbp.local' "Riverwood" 
+# This is the HOSTS dictionary. Add new entries following this format:
+#           'real-name' "Name To Display"         
+host_repr=( 'mbp.local' "Riverwood"
+            'wifi-84-132.uc3m.es' "Winterhold"
             )
 
 typeset -A user_repr
 
+# This is the USERS dictionary. Add new entries following this format:
+#           'real-name' "Name To Display"  
 user_repr=( 'diego' "Nattesferd"
             )
 
