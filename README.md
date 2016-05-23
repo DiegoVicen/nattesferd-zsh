@@ -6,7 +6,7 @@
 
 ### Theme
 
-The theme is a fork from [Honukai](https://github.com/oskarkrawczyk/honukai-iterm-zsh), based on the wonderfully made [ys](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/ys.zsh-theme) theme from the official [oh-my-zsh repo](https://github.com/robbyrussell/oh-my-zsh). It's main feature is the ability to change the hostname displayed to custom aliases (as well as the username), without changin any global variables or other configuration files. Nattesferd is possible thanks to the help of [mcornella](https://github.com/mcornella).
+The theme is a fork from [Honukai](https://github.com/oskarkrawczyk/honukai-iterm-zsh), based on the wonderfully made [ys](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/ys.zsh-theme) theme from the official [oh-my-zsh repo](https://github.com/robbyrussell/oh-my-zsh). It's main features are the ability to change the hostname displayed to custom aliases (as well as the username), as well as the intelligent path shortener that uses to display your actual directory. Nattesferd is possible thanks to the help of [mcornella](https://github.com/mcornella).
 
 ### Installation
 
@@ -24,6 +24,11 @@ The theme is a fork from [Honukai](https://github.com/oskarkrawczyk/honukai-iter
 3. Once you have added the alias, run `source ~/.zshrc` to make the changes effective.
 
 If no alias is found, the prompt will display the default value of `$HOST` or `$USER`.
+
+### Path shortener
+
+The path displayed in Nattesferd is not the complete path of the actual directory. Instead, Nattesferd displays the complete name of the current directory and the shortest meaningful prefix for any parent directory. That means that the part of the name displayed is the minimum necessary to uniquely identify the directory. As a nmemonic, you can also think that the name displayed is the minimum necessary for tab-completion to work instantly (only one possible completion). This feature is completely implemented in shell script and is inspired by [this answer in StackOverfow](http://stackoverflow.com/a/2951707).
+
 
 ### Eyecandy
 
