@@ -111,10 +111,14 @@ ys_hg_prompt_info() {
         echo -n "$YS_VCS_PROMPT_SUFFIX"
     fi
 }
+local vim_info='$(vim_mode)'
+vim_mode() {
+    echo "$VIM_PROMPT"
+}
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
-%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+${vim_info} \
 %{$fg[cyan]%}${user_repr[$USER]:-$USER} \
 %{$fg[white]%}at \
 %{$fg[green]%}${host_repr[$HOST]:-$HOST} \
@@ -124,17 +128,3 @@ ${hg_info}\
 ${git_info} \
 %{$fg[white]%}
 %{$terminfo[bold]$fg[red]%}→ %{$reset_color%}"
-
-if [[ "$USER" == "root" ]]; then
-PROMPT="
-%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-%{$fg[cyan]%}${user_repr[$USER]:-$USER} \
-%{$fg[white]%}at \
-%{$fg[green]%}${host_repr[$HOST]:-$HOST} \
-%{$fg[white]%}in \
-%{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
-${hg_info}\
-${git_info} \
-%{$fg[white]%}
-%{$terminfo[bold]$fg[red]%}→ %{$reset_color%}"
-fi
